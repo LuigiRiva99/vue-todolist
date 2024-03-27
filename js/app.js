@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+    currentIndex : null,
       todoList : [
         {
             text: 'fare la spesa',
@@ -25,6 +26,14 @@ createApp({
             done: true
         },
       ]
+    }
+  },
+
+  methods : {
+    //creo una funzione che mi permette di rimuovere un element dalla todolist
+    removeTodo(i) {
+        console.log(i);
+        this.todoList.splice(i, 1)
     }
   }
 }).mount('#app')

@@ -27,3 +27,16 @@ li{
 .done{
     text-decoration: line-through;
 }
+
+.task_list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.xmark:hover {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
