@@ -11,6 +11,8 @@
     <div id="app">
         <div class="container">
             <p class="title">TODOLIST</p>
+            <input type="text" v-model="inputValue" @keyup.enter="addTodo">
+            <button @click="addTodo">aggiungi</button>
             <ul>
                 <li
                  v-for="(element,i) in todoList"
