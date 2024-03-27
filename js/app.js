@@ -43,6 +43,14 @@ createApp({
                 done: false
             }
         )
-    }
+    },
+
+    doneToggle(i) {
+        if (this.todoList[i].done === true) {
+            this.todoList[i].done = false
+        } else {
+            this.todoList[i].done = true
+        }
+    },
   }
 }).mount('#app')

@@ -18,7 +18,11 @@
                  v-for="(element,i) in todoList"
                  class="task_list"
                 >
-                <div :class="element.done === true ? 'done' : ''">
+                <div 
+                class="todo_text"
+                :class="element.done === true ? 'done' : ''"
+                @click="doneToggle(i)"
+                >
                     {{element.text}}
                 </div>
                 <i class="fa-solid fa-xmark xmark"
